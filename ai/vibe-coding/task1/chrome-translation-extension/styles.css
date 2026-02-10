@@ -1,0 +1,33 @@
+.ai-translation-block {
+    color: #666;
+    background-color: #f9f9f9;
+    border-left: 3px solid #3498db;
+    padding: 8px 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 0.95em;
+    line-height: 1.5;
+    font-style: normal;
+    animation: fadeIn 0.5s ease-in-out;
+    display: block;
+    /* Ensure block level */
+}
+
+.ai-translation-error {
+    color: #c0392b;
+    border-left-color: #c0392b;
+    background-color: #fdedec;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

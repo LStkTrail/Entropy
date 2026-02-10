@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>贪吃蛇游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>贪吃蛇游戏</h1>
+            <div class="score-board">
+                <p>分数: <span id="score">0</span></p>
+                <p>最高分: <span id="high-score">0</span></p>
+            </div>
+        </header>
+        
+        <div class="settings-panel">
+            <div class="setting-group">
+                <label for="difficulty">难度:</label>
+                <select id="difficulty">
+                    <option value="veryEasy">简单</option>
+                    <option value="easy">较易</option>
+                    <option value="normal" selected>普通</option>
+                    <option value="hard">困难</option>
+                    <option value="hell">地狱</option>
+                </select>
+            </div>
+            
+            <div class="setting-group">
+                <label for="theme">主题:</label>
+                <select id="theme">
+                    <option value="snake" selected>蛇</option>
+                    <option value="caterpillar">毛毛虫</option>
+                    <option value="train">火车</option>
+                    <option value="basketball">篮球</option>
+                </select>
+            </div>
+        </div>
+        
+        <main>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </main>
+        
+        <div class="controls">
+            <p class="instructions">使用方向键或 WASD 控制移动，空格键暂停/继续，Enter键开始游戏</p>
+            <div class="button-group">
+                <button id="pauseBtn" disabled>暂停</button>
+                <button id="startBtn">开始游戏</button>
+            </div>
+        </div>
+        
+        <div id="countdownModal" class="modal hidden">
+            <div class="modal-content">
+                <p id="countdownText">3</p>
+            </div>
+        </div>
+        
+        <div id="gameOverModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>游戏结束!</h2>
+                <p>最终分数: <span id="finalScore">0</span></p>
+                <button id="playAgainBtn">再玩一次</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
